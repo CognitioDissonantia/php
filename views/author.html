@@ -1,0 +1,11 @@
+{include file="views/header.html"}
+<main>            
+    <h2 class="index_title">{$name}</h2>
+    <article>
+        {foreach from=$articles item=article}
+            <p class="index_items"><a href="index.php?page=Articles&action=read&id={$article.id}">{$article.title}</a><p>
+        {/foreach}
+    </article>
+    <p class="level_up"><a href="index.php?page=Authors">[к списку авторов]</a></p>
+</main>
+{include file="views/footer.html"}
